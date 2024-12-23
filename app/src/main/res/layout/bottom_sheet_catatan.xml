@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_catatan_dokter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/catatan_dokter"/>
+
+    <TextView
+        android:id="@+id/tv_gejala_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_catatan_dokter_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:text="@string/gejala"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_gejala"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_gejala_title"
+        app:layout_constraintStart_toStartOf="@id/tv_gejala_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.Chip.Input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_gejala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_diagnosis_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/til_gejala"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:text="@string/diagnosis"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_diagnosis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_diagnosis_title"
+        app:layout_constraintStart_toStartOf="@id/tv_diagnosis_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.Chip.Input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_diagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_catatan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/til_diagnosis"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:text="@string/catatan"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_catatan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_catatan_title"
+        app:layout_constraintStart_toStartOf="@id/tv_diagnosis_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxStrokeColor="@color/app_color"
+        app:boxBackgroundColor="@color/grey_less">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_catatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="4"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_catatan_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/til_catatan"
+        app:layout_constraintStart_toStartOf="@id/til_catatan"
+        app:layout_constraintEnd_toEndOf="@id/til_catatan"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/secondary_color"
+        android:backgroundTintMode="screen"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/simpan"/>
+
+    <Button
+        android:id="@+id/btn_akhiri_sesi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_catatan_send"
+        app:layout_constraintStart_toStartOf="@id/btn_catatan_send"
+        app:layout_constraintEnd_toEndOf="@id/btn_catatan_send"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/akhiri_sesi"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

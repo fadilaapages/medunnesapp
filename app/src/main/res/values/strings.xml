@@ -1,0 +1,318 @@
+<resources>
+    <string name="app_name">MedUnnes</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_message">Message</string>
+    <string name="title_profile">Profil</string>
+    <string name="masuk_daftar">Masuk/Daftar</string>
+    <string name="user_location">User\'s location</string>
+    <string name="greeting">Selamat %1$s,</string>
+    <string name="nama_and_titel">%1$s %2$s, %3$s</string>
+    <string name="greetings">Salam sehat dan sejahtera</string>
+    <string name="layanan_utama">Layanan Utama</string>
+    <string name="konsultasi_sekarang">Konsultasi\nSekarang</string>
+    <string name="janji_pasien">Buat Janji\ndengan Dokter</string>
+    <string name="konsultasi_dokter">Konsultasi dengan Pasien</string>
+    <string name="janji_dokter">Janji dengan\nPasien</string>
+    <string name="daftar_sebagai">Daftar Sebagai</string>
+    <string name="layanan">Layanan</string>
+    <string name="pasien">Pasien</string>
+    <string name="dokter">Dokter</string>
+    <string name="dosen">Dosen</string>
+    <string name="artikel_kesehatan">Artikel Kesehatan</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="faskes_terdekat">Faskes Terdekat</string>
+    <string name="masuk_sebagai_pasien">Masuk Sebagai Pasien</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="masukkan_password">Masukkan password</string>
+    <string name="masukkan_email">Masukkan email</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="daftar">Daftar</string>
+    <string name="daftar_sebagai_dokter">Daftar Sebagai Dokter</string>
+    <string name="nama_lenkap">Nama Lengkap</string>
+    <string name="title_depan">Titel Depan</string>
+    <string name="masukkan_titel_depan">contoh: dr.</string>
+    <string name="titel_belakang">Titel Belakang</string>
+    <string name="masukkan_titel_belakang">contoh: SpOG</string>
+    <string name="masukkan_nama_lengkap">Masukkan nama lengkap</string>
+    <string name="no_reg">NIM</string>
+    <string name="masukkan_nomor_reg">Masukkan NIM</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="alamat">Alamat</string>
+    <string name="masukkan_alamat_lengkap">Masukkan alamat lengkap</string>
+    <string name="tempat_praktik">Tempat Praktik</string>
+    <string name="masukkan_tempat_praktik">Masukkan tempat praktik</string>
+    <string name="no_telepon">No. Telepon</string>
+    <string name="masukkan_no_telepon">Masukkan no. telepon</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="masuk">Masuk</string>
+    <string name="register">Register</string>
+    <string name="daftar_akun">Daftar Akun</string>
+    <string name="approve_janji_pasien">Approve Janji Pasien</string>
+    <string name="daftar_mahasiswa">Daftar Mahasiswa</string>
+    <string name="konsultasi">Konsultasi</string>
+    <string name="search_hint">Cari nama pasien</string>
+    <string name="sesi_pasien">Sesi pasien</string>
+    <string name="status">Status</string>
+    <string name="title_activity_layanan_dokter">LayananDokterActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="back_button_description">kembali</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="faq">FAQ</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="hapus_akun">Keluar</string>
+    <string name="rumah_sakit">Rumah Sakit</string>
+    <string name="simpan_perubahan">Simpan Perubahan</string>
+    <string name="role_dokter">Role dokter</string>
+    <string name="pengalaman_dokter">Pengalaman Dokter</string>
+    <string name="search_doctor_hint">Cari nama dokter</string>
+    <string name="search_mahasiswa_hint">Cari nama mahasiswa</string>
+    <string name="buat_janji">Buat Janji</string>
+    <string name="pendidikan">Pendidikan</string>
+    <string name="pendidikan_dokter">Pendidikan dokter</string>
+    <string name="button_back">button back</string>
+    <string name="pilih_spesialisasi_dokter">Pilih spesialisasi dokter</string>
+    <string name="spesialis_dokter">Spesialis %1s</string>
+    <string name="spesialisasi_desk">Pilih spesialisasi dokter sesuai dengan kebutuhanmu</string>
+    <string name="dokter_umum">Dokter Umum</string>
+    <string name="kandungan">Kandungan</string>
+    <string name="psikiater">Psikiater</string>
+    <string name="kulit_dan_kelamin">Kulit dan Kelamin</string>
+    <string name="lihat_selengkapnya">lihat selengkapnya</string>
+    <string name="cari_dokter_umum">Cari Dokter Umum</string>
+    <string name="rekomendasi_dokter_desk">Berikut ada rekomendasi dokter umum yang mungkin sesuai dengan kebutuhanmu</string>
+    <string name="anak">Anak</string>
+    <string name="syaraf">Syaraf</string>
+    <string name="jantung">Jantung</string>
+    <string name="bedah">Bedah</string>
+    <string name="penyakit_dalam">Penyakit Dalam</string>
+    <string name="mata">Mata</string>
+    <string name="tht">THT</string>
+    <string name="gigi">Gigi</string>
+    <string name="spesialis">Spesialis</string>
+    <string name="masukkan_spesialis">Masukkan spesialis</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="format_tangagl">Format: DD/MM/YYYY</string>
+    <string name="pilih_sesi">Pilih Sesi</string>
+    <string name="no_sesi">Sesi %1d</string>
+    <string name="sesi_pukul">%1d - %2d</string>
+    <string name="buat_janji_sekarang">Buat janji sekarang?</string>
+    <string name="alert_buat_janji_deskripsi">Data yang sudah disimpan tidak bisa disubah</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="sukses">SUKSES!</string>
+    <string name="buat_janji_sukses">Menunggu persetujuan dokter tersebut</string>
+    <string name="ok">OK</string>
+    <string name="buat_janji_form_is_empty">*silahkan pilih tanggal dan sesi</string>
+    <string name="id">ID</string>
+    <string name="tanggal_sesi">Tanggal Sesi</string>
+    <string name="masukkan_pendidikan">Masukkan Asal Kampus</string>
+    <string name="sesi">Sesi</string>
+    <string name="setujui">Setujui</string>
+    <string name="tolak">Tolak</string>
+    <string name="data_empty">Tidak ada data yang ditemukan</string>
+    <string name="tambah_pasien_hint">Isi form di bawah untuk menambahkan pasien</string>
+    <string name="detail_informasi">Detail Informasi</string>
+    <string name="hubungan">Hubungan</string>
+    <string name="unggah_kartu_identitas">Unggah Foto KTP/KIA/Paspor Pasien</string>
+    <string name="simpan">Simpan</string>
+    <string name="tambah_pasien">+ Pasien</string>
+    <string name="delete_pasien_alert_deskripsi">Data yang sudah dihapus tidak dapat dikembalikan</string>
+    <string name="hapus_data_pasien">Hapus data pasien?</string>
+    <string name="nik">NIK</string>
+    <string name="masukkan_nik">Masukkan NIK</string>
+    <string name="masukkan_tinggi_badan_cm">Masukkan Tinggi Badan (cm)</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="tinggi_badan_cm">%1$s cm</string>
+    <string name="masukkan_berat_badan_kg">Masukkan Berat Badan (kg)</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="berat_badan_kg">%1$d kg</string>
+    <string name="dalam_cm">Dalam cm</string>
+    <string name="dalam_kg">dalam kg</string>
+    <string name="tempat_lulus">Tempat Lulus</string>
+    <string name="masukkan_tempat_lulus">Masukkan tempat lulus</string>
+    <string name="tanggal_mulai_aktif">Tanggal Mulai Aktif</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
+    <string name="masukkan_tahun_lulus">Masukkan tahun lulus</string>
+    <string name="tahun_lulus">Tahun Lulus</string>
+    <string name="tanggal_lulus">Tanggal Lulus</string>
+    <string name="catatan">Catatan</string>
+    <string name="berikan_catatan_kepada_dokter">Berikan catatan kepada dokter</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="beri_catatan">Beri catatan</string>
+    <string name="konsultasikan_kondisimu">Konsultasikan kondisimu</string>
+    <string name="ini_merupakan_pesan">Ini merupakan pesan</string>
+    <string name="waktu">waktu</string>
+    <string name="catatan_dokter">Catatan Dokter</string>
+    <string name="gejala">Gejala</string>
+    <string name="catatan_detail">Gejala:\n%1s</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="akhiri_sesi">Akhiri Sesi</string>
+    <string name="sesi_telah_berakhir">Sesi telah berakhir</string>
+    <string name="lihat_catatan">Lihat catatan</string>
+    <string name="lihat_riwayat">Lihat catatan</string>
+    <string name="masuk_untuk_menggunakan_layanan">Masuk untuk menggunakan layanan</string>
+    <string name="berakhir">Berakhir</string>
+    <string name="berlangsung">Berlangsung</string>
+    <string name="cari_riwayat_konsultasi">Cari riwayat konsultasi</string>
+    <string name="histories_title">Riwayat</string>
+    <string name="tambahkan_pasien">Tambahkan pasien?</string>
+    <string name="pastikan_data_pasien_sudah_benar">Pastikan data pasien sudah benar</string>
+    <string name="sesi_tidak_dapat_dimulai_kembali">Sesi tidak dapat dimulai kembali</string>
+    <string name="akhiri_sesi_1">Akhiri sesi?</string>
+    <string name="tentang_medunnes">Tentang Medunnes</string>
+    <string name="tentang_medunnes_description">Perkembangan teknologi yang pesat memungkinkan pemanfaatannya di berbagai bidang,seperti industri, telekomunikasi, ataupun kesehatan. Pemanfaatan teknologi di bidang kesehatan dapat menjadisolusi dari masalah kesehatan yang ada, seperti kurangnya layanan kesehatan di beberapa daerah. Kurangnya layanan kesehatan di beberapa daerah membuat masyarakat tidak dapat mengurus kesehatannya dengan baik.\n\n
+Di saat yang sama, mahasiswa kedokteran UNNES sulit untuk melaksanakan praktik yang mengharuskannya berkomunikasidengan masyarakat sebagai pasien dikarenakan kurangnya sarana yang mendukung. Inovasi Telekomunikasi Medis merupakan solusi dari masalah ini. Telemedicine memungkinkan mahasiswa kedokteran untuk berkomunikasi dengan masyarakat sebagai pasien. Medunnes merupakan sebuah aplikasi telekomunikasi medis berbasis website dan mobile yang dirancang untuk mendukung praktik mahasiswa kedokteran UNNES.\n\n
+Aplikasi Medunnes merupakan aplikasi yang dapat menghubungkan masyarakat dengan dokter sehingga masyarakat dapatberkonsultasi dengan dokter.
+        </string>
+    <string name="verifikasi_email">Verifikasi Email</string>
+    <string name="verifikasi_email_deskripsi">Masukan kode OTP yang dikirimkan ke email yang didaftarkan</string>
+    <string name="kirim">Kirim</string>
+    <string name="dosen_chat_warn">Anda hanya bisa melihat</string>
+    <string name="konsultasi_dosen_description">Pantau Praktik Konsultasi Mahasiswa</string>
+    <string name="janji_dosen_description">Lihat Daftar Mahasiswa</string>
+    <string name="kirim_url_verifikasi">Kirim URL Verifikasi</string>
+    <string name="masukkan_email_anda">Masukkan Email Anda</string>
+
+    <string-array name="jenis_kelamin">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="spesialissasi">
+        <item>Dokter Umum</item>
+        <item>Kandungan</item>
+        <item>Psikiater</item>
+        <item>Kulit dan kelamin</item>
+        <item>Anak</item>
+        <item>Saraf</item>
+        <item>Jantung</item>
+        <item>Bedah</item>
+        <item>Penyakit dalam</item>
+        <item>Mata</item>
+        <item>THT</item>
+        <item>Gigi</item>
+    </string-array>
+
+    <!-- Dummy Data List -->
+    <string-array name="film_judul">
+        <item>Hacksaw Ridge</item>
+        <item>The Raid</item>
+        <item>The Batman</item>
+        <item>FIlosofi Kopi</item>
+        <item>The Hunger Games</item>
+        <item>Zodiac</item>
+        <item>The Maze Runner</item>
+        <item>The Walk</item>
+        <item>Inception</item>
+        <item>The Martian</item>
+    </string-array>
+
+    <string-array name="rilis_tahun">
+        <item>2016</item>
+        <item>2011</item>
+        <item>2022</item>
+        <item>2015</item>
+        <item>2012</item>
+        <item>2007</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2010</item>
+        <item>2015</item>
+    </string-array>
+
+    <string-array name="film_sinopsis">
+        <item>Hacksaw Ridge adalah film yang mengisahkan kisah nyata Desmond Doss (diperankan oleh Andrew Garfield), seorang penentang bersumpah yang mendaftar ke dalam tentara Amerika selama Perang Dunia II tanpa membawa senjata, dan kemudian menjadi pahlawan medis lapangan di Pertempuran Okinawa, menyelamatkan puluhan nyawa tanpa pernah mengambil nyawa manusia, mempertaruhkan hidupnya untuk melakukan tindakan penyelamatan yang penuh pengorbanan di tengah pertempuran yang brutal, yang akhirnya memenangkannya Medali Kehormatan Amerika Serikat.</item>
+        <item>The Raid adalah film aksi Indonesia yang mengisahkan seorang anggota pasukan khusus bernama Rama (diperankan oleh Iko Uwais) yang bersama dengan timnya masuk ke sebuah apartemen yang dikuasai oleh sekelompok kriminal sadis. Mereka harus berjuang melawan berbagai jenis lawan yang sangat mematikan dalam upaya untuk menangkap bos narkoba yang berbahaya. Film ini ditandai dengan aksi bela diri yang sangat intens, pertarungan brutal, dan ketegangan yang meningkat sepanjang cerita, menjadikannya sebagai salah satu film aksi terkenal dari Indonesia yang diakui secara internasional.</item>
+        <item>The Batman adalah film superhero yang mengisahkan petualangan baru Bruce Wayne/Batman (diperankan oleh Robert Pattinson) dalam perannya sebagai penjaga Gotham City yang canggih. Di tengah kota yang tenggelam dalam kejahatan dan korupsi, Batman menyelidiki serangkaian pembunuhan misterius yang terhubung dengan sejarah gelap kota, sementara juga menghadapi musuh tangguh seperti Riddler (diperankan oleh Paul Dano) dan Catwoman (diperankan oleh Zoë Kravitz). Film ini menggabungkan elemen noir yang gelap dengan aksi yang mendebarkan, mengungkap lapisan-lapisan kompleks karakter Batman sambil menggali kedalaman kisah Gotham City.</item>
+        <item>Filosofi Kopi adalah film Indonesia yang mengisahkan perjalanan seorang penjual kopi bernama Ben (diperankan oleh Chicco Jerikho) dan sahabatnya Jody (diperankan oleh Rio Dewanto) dalam menjalankan kedai kopi kecil mereka, Filosofi Kopi. Kedai ini menjadi tempat bagi berbagai macam karakter dan cerita hidup yang berlalu, sementara Ben mencoba mencari makna lebih dalam dari segelas kopi. Film ini menjelajahi tema-tema seperti persahabatan, cinta, kehidupan, dan makna dalam setiap cangkir kopi, menciptakan kisah yang menggugah hati dengan latar yang sarat pesan filosofis.</item>
+        <item>The Hunger Games adalah sebuah film yang diadaptasi dari seri novel dengan nama yang sama oleh Suzanne Collins. Film ini berlatar di masa depan di negara fiksi yang disebut Panem, yang terdiri dari Capitol yang kuasa dan 12 distrik yang tertindas. Dalam hukuman brutal untuk memberontak, Capitol mengadakan Hunger Games tahunan, di mana satu remaja laki-laki dan satu remaja perempuan dari setiap distrik dipaksa untuk bertempur sampai mati di arena yang ditayangkan secara langsung. Cerita berpusat pada Katniss Everdeen (diperankan oleh Jennifer Lawrence) yang menjadi sukarelawan untuk menggantikan adiknya dalam Hunger Games, memulai perjalanan epik yang penuh perjuangan, persahabatan, dan perlawanan terhadap ketidakadilan, sambil menghadapi ancaman mematikan dan intrik politik di Capitol.</item>
+        <item>Zodiac adalah sebuah film thriller psikologis yang disutradarai oleh David Fincher, yang mengisahkan kisah sebenarnya dari pembunuh berantai yang dikenal sebagai Zodiac Killer, yang aktif di San Francisco pada tahun 1960-an dan 1970-an. Film ini berpusat pada upaya jurnalis, detektif, dan wartawan untuk mengidentifikasi dan menangkap pembunuh tersebut, serta dampak yang berkepanjangan dari kasus ini pada kehidupan mereka. Dengan berfokus pada karakter yang mendalam dan penyelidikan yang penuh teka-teki, "Zodiac" menciptakan atmosfer yang tegang dan menggugah pemirsa dengan menggali detail-detail mengerikan dari kasus sebenarnya yang belum pernah terpecahkan ini.</item>
+        <item>The Maze Runner adalah film adaptasi dari novel berjudul sama karya James Dashner. Film ini mengisahkan kisah seorang pemuda bernama Thomas (diperankan oleh Dylan O Brien) yang tiba-tiba terbangun dalam sebuah komunitas remaja yang terjebak di sebuah labirin raksasa yang mematikan tanpa ingatan tentang masa lalu mereka. Thomas kemudian bergabung dengan para remaja lain yang berusaha mencari jalan keluar dari labirin itu, menghadapi bahaya monster misterius yang menghuni labirin tersebut. Sementara mereka berusaha mencari tahu mengapa mereka berada di sana, mereka juga harus mengatasi konflik internal dan mengungkap rahasia di balik misteri labirin tersebut. Film ini penuh dengan ketegangan, misteri, dan tindakan yang mendebarkan sepanjang perjalanan mencari kebebasan mereka.</item>
+        <item>The Walk adalah sebuah film yang disutradarai oleh Robert Zemeckis yang mengisahkan kisah seorang seniman kawat sejalan asal Prancis bernama Philippe Petit (diperankan oleh Joseph Gordon-Levitt). Film ini berdasarkan kisah nyata tentang pengaruh Philippe Petit dalam merencanakan dan menjalankan aksi sejalan yang berani dan berbahaya pada tahun 1974, yaitu berjalan di atas tali kawat yang dijentangkan antara menara Kembar World Trade Center di New York City. Film ini membangun ketegangan yang menggigit seiring dengan persiapan Petit dan timnya untuk menjalankan aksi yang sangat spektakuler dan menghadirkan pemandangan mengesankan dari ketinggian dan petualangan yang luar biasa di atas langit New York.</item>
+        <item>Dalam film Inception karya Christopher Nolan, Dom Cobb (diperankan oleh Leonardo DiCaprio), seorang pencuri berbakat dalam masuk ke dalam mimpi orang lain untuk mencuri rahasia dari alam bawah sadar mereka, mendapat tawaran sulit untuk melakukan "inception," yaitu menanamkan ide ke dalam pikiran seseorang melalui mimpi. Dalam perjalanan yang penuh teka-teki dan intrik, Cobb dan timnya memasuki lapisan-lapisan mimpi yang semakin dalam, menciptakan dunia yang berputar-putar di antara realitas dan khayalan, sementara juga menghadapi masa lalu yang kelam dan pengorbanan pribadi. "Inception" menggabungkan elemen ilmu pengetahuan fiksi dan psikologi dalam sebuah perjalanan visual yang luar biasa dan kompleks, yang menantang pemirsa untuk merenungkan tentang realitas dan kesadaran.</item>
+        <item>The Martian" adalah sebuah film yang diadaptasi dari novel dengan judul yang sama karya Andy Weir. Film ini disutradarai oleh Ridley Scott dan dibintangi oleh Matt Damon sebagai Mark Watney, seorang astronaut NASA yang tertinggal dan ditinggalkan di Mars oleh timnya karena mereka mengira dia telah tewas dalam badai pasir yang dahsyat. Mark Watney harus berjuang untuk bertahan hidup dalam kondisi yang sangat keras dan terisolasi di planet merah tersebut. Dengan sumber daya terbatas, dia harus mencari cara untuk memproduksi makanan, air, dan menghubungi Bumi untuk meminta bantuan. Film ini mengikuti perjuangan Watney untuk bertahan hidup di Mars sambil juga memperlihatkan upaya besar dari NASA dan rekan-rekan astronotnya untuk menyelamatkannya. "The Martian" adalah kombinasi antara drama bertahan hidup yang mendebarkan dan eksplorasi luar angkasa yang menarik, dengan sentuhan humor khas Mark Watney.</item>
+    </string-array>
+
+    <string-array name="poster_film">
+        <item>https://upload.wikimedia.org/wikipedia/id/7/7b/Hacksaw_Ridge_Movie_Poster_2016.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/en/9/9a/The_Raid_2011_poster.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/id/5/54/The_Batman_%28film%29_poster.jpeg</item>
+        <item>https://upload.wikimedia.org/wikipedia/id/2/2c/Poster_film_Filosofi_Kopi_2015.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/id/8/8a/Zodiac32432.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/id/b/be/The_Maze_Runner_poster.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/en/5/57/The_Walk_%282015_film%29_poster.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/id/9/91/Inception_poster.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg</item>
+    </string-array>
+
+    <string-array name="sesi_dokter">
+        <item>08.30 – 09.00</item>
+        <item>09.30 – 10.00</item>
+        <item>10.30 – 11.00</item>
+        <item>11.30 – 12.00</item>
+        <item>13.00 – 13.30</item>
+        <item>14.00 – 14.30</item>
+    </string-array>
+
+
+    <string-array name="hubungan_pasien">
+        <item>Keluarga</item>
+        <item>Teman</item>
+    </string-array>
+
+</resources>
