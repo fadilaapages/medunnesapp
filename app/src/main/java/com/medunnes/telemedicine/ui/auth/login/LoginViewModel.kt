@@ -14,7 +14,7 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
 
     suspend fun getUserStatus(): Boolean = userRepository.getLoginStatus()
     suspend fun getUserLogin(id: Int): UserResponse = userRepository.getUserLogin(id)
+    
+    }
 
 
-
-}

@@ -51,15 +51,10 @@ class BuatJanjiDokterFragment : Fragment(), View.OnClickListener {
         lifecycleScope.launch { setPasienData() }
 
         with(binding) {
-            tilJanjiTanggal.setEndIconOnClickListener { showDatePicker() }
             btnBuatJanjiDokter.setOnClickListener(this@BuatJanjiDokterFragment)
             tvFormIsEmpty.visibility = View.VISIBLE
-            tvSesiPicked.visibility = View.GONE
-            tvDatePicked.visibility = View.GONE
             tilPasien.setEndIconOnClickListener { selectPatient() }
         }
-
-        getSesiList()
 
         return binding.root
     }
@@ -72,7 +67,7 @@ class BuatJanjiDokterFragment : Fragment(), View.OnClickListener {
         viewModel.dokter.observe(viewLifecycleOwner) { data ->
             with(binding) {
                 data.forEach { dokter ->
-                    tvDoctorSpeciality.text = spesialis[(dokter.spesialisId.toInt())]
+                    tvDoctorSpeciality.text = spesialis[(dokter.spesialisId.toInt())-1]
                     tvDoctorName.text = dokter.user.name
                     tvDoctorExperience.text = dokter.nim.toString()
                     val imagePath = "${imageBaseUrl()}/${dokter.imgDokter}"
@@ -113,65 +108,6 @@ class BuatJanjiDokterFragment : Fragment(), View.OnClickListener {
                 }
             }
         }
-    }
-
-    private fun showDatePicker() {
-        val calendar = Calendar.getInstance(Locale("id", "ID"))
-        val cYear = calendar.get(Calendar.YEAR)
-        val cMonth = calendar.get(Calendar.MONTH)
-        val cDay = calendar.get(Calendar.DATE)
-
-        val datePickerDialog = DatePickerDialog(
-            requireContext(), R.style.DialogTheme, { _, year, month, day ->
-                calendar.set(year, month, day)
-                val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-                val fullDateFormat = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
-                val date = dateFormat.format(calendar.time)
-                binding.tieSesiDate.setText(date)
-                binding.tvDatePicked.text = fullDateFormat.format(calendar.time)
-                datePicked = date
-                binding.tvFormIsEmpty.visibility = View.GONE
-                binding.tvDatePicked.visibility = View.VISIBLE
-
-            }, cYear, cMonth, cDay)
-        datePickerDialog.show()
-    }
-
-    private fun showRecycleList() {
-        val orientation = resources.configuration.orientation
-        val column: Int = if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            2
-        } else {
-            4
-        }
-        binding.rvSesiList.layoutManager = GridLayoutManager(context, column)
-        val sesiAdapter = SesiAdapter(listSesi)
-        binding.rvSesiList.adapter = sesiAdapter
-
-        sesiAdapter.setOnItemClickCallback(object : SesiAdapter.OnItemClickCallback {
-            override fun onClick(sesi: SesiDataItem) {
-                with(binding) {
-                    tvFormIsEmpty.visibility = View.GONE
-                    tvSesiPicked.visibility = View.VISIBLE
-                    sesiPicked = getString(R.string.no_sesi, sesi.idSesi)
-                    tvSesiPicked.text = sesiPicked
-                    sesiNumber = sesi.idSesi
-                }
-            }
-        })
-    }
-
-    private fun getSesiList(): ArrayList<SesiDataItem> {
-        val doctorId = arguments?.getInt(DOCTOR_ID)
-        if (doctorId != null) {
-            viewModel.getAllSesi(doctorId)
-            viewModel.sesi.observe(viewLifecycleOwner) { sesi ->
-                listSesi.clear()
-                listSesi.addAll(sesi)
-                showRecycleList()
-            }
-        }
-        return listSesi
     }
 
     private fun postJanji(isConfirm: Boolean) {
@@ -248,11 +184,8 @@ class BuatJanjiDokterFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View?) {
         with(binding) {
             when(view) {
-                tilJanjiTanggal -> showDatePicker()
                 btnBuatJanjiDokter -> {
-                    if (datePicked.isNotEmpty()
-                        && !sesiPicked.isNullOrEmpty()
-                        && !tiePasienIdPicked.text.isNullOrEmpty()
+                    if (!tiePasienIdPicked.text.isNullOrEmpty()
                         && !tiePasienTambahanIdPicked.text.isNullOrEmpty()
                         && !tieSesiCatatan.text.isNullOrEmpty()
                     ) {

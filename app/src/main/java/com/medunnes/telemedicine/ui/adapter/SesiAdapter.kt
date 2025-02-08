@@ -32,10 +32,10 @@ class SesiAdapter(private val sesiLis: ArrayList<SesiDataItem>): RecyclerView.Ad
 
         //var isClicked = true
         if (selectedItem == position) {
-            holder.tableRow.setBackgroundColor(Color.parseColor("#E6C38C"))
+            holder.tableRow.setBackgroundColor(Color.parseColor("#1C775A"))
             holder.cardView.elevation = 10F
         } else {
-            holder.tableRow.setBackgroundColor(Color.parseColor("#E1C8A5"))
+            holder.tableRow.setBackgroundColor(Color.parseColor("#529881"))
             holder.cardView.elevation = 0F
         }
 

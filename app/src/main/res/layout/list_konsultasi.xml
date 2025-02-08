@@ -33,6 +33,7 @@
         android:layout_marginStart="16dp"
         android:textStyle="bold"
         android:textSize="16sp"
+        android:textColor="@color/black"
         android:text="@string/nama_lenkap"/>
 
     <TextView

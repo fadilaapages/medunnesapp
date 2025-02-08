@@ -85,6 +85,7 @@ class ProfileEditDokterActivity : AppCompatActivity(), View.OnClickListener {
 
                         if (!it.imgDokter.isNullOrEmpty()) {
                             val imagePath = "${imageBaseUrl()}/${it.imgDokter}"
+                            Log.d("ImagePath", imagePath)
                             Glide.with(this@ProfileEditDokterActivity)
                                 .load(imagePath)
                                 .into(binding.ivEditPicture)

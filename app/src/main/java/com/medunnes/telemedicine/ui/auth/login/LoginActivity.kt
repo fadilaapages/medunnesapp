@@ -10,12 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.medunnes.telemedicine.ResetPasswordActivity
 import com.medunnes.telemedicine.ViewModelFactory
 import com.medunnes.telemedicine.databinding.ActivityLoginBinding
 import com.medunnes.telemedicine.ui.home.HomeFragment
 import com.medunnes.telemedicine.ui.main.MainActivity
+import com.medunnes.telemedicine.ui.notification.TokenManager
 import com.medunnes.telemedicine.ui.registeras.RegisterAsActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -26,6 +29,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         ViewModelFactory.getInstance(this)
     }
     private lateinit var auth: FirebaseAuth
+    private lateinit var tokenManager: TokenManager
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +38,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+        tokenManager = TokenManager(firestore)
 
         with(binding) {
             tvDaftar.setOnClickListener(this@LoginActivity)
@@ -85,6 +92,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                             }
                             firebaseLogin(userEmail, userPassword)
                             setLoginStatus() // Menyimpan status login user
+
+                            retrieveFcmToken(login.user.idUser. toString())
                             loginIfSuccess()
                         } else {
                             hideProgressBar()
@@ -103,6 +112,20 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                         Log.d("ERROR", e.toString())
                     }
                 }
+            }
+        }
+    }
+
+    private fun retrieveFcmToken(userId: String){
+        FirebaseMessaging.getInstance().token.addOnCompleteListener() { task ->
+            if (task.isSuccessful) {
+                //cetak token di logcat
+                val fcmToken = task.result
+                if (fcmToken != null) {
+                    tokenManager.sendTokenToServer(userId, fcmToken)
+                }
+            } else {
+                Log.e("FCM", "Gagal mendapat token", task.exception)
             }
         }
     }

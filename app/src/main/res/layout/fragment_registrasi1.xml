@@ -18,6 +18,7 @@
             android:text="@string/daftar_sebagai_dokter"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/cv_form_registrasi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

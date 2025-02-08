@@ -12,6 +12,7 @@ import com.medunnes.telemedicine.data.response.PasienTambahanResponse
 import com.medunnes.telemedicine.data.response.SesiResponse
 import com.medunnes.telemedicine.data.response.UserResponse
 import okhttp3.MultipartBody
+import okhttp3.ResponseBody
 import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -309,6 +310,13 @@ interface ApiService {
         @Field("diagnosis") diagnosis: String,
         @Field("catatan") catatan: String
     ): CatatanResponse
+
+    @FormUrlEncoded
+    @POST("api/storeToken")
+    suspend fun storeToken(
+        @Field("user_id") userId: String,
+        @Field("fcm_token") fcmToken: String
+    ): ResponseBody
 
     @GET("api/artikel")
     suspend fun getAllArtikel(): ArtikelResponse

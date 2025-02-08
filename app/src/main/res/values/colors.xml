@@ -7,9 +7,9 @@
     <color name="white_glass">#D5FFFFFF</color>
     <color name="grey_blue">#788CA0</color>
     <color name="grey_less">#D7D7D7</color>
-    <color name="grey_less_less">#EBEBEB</color> //#C1D9B7
-    <color name="app_color">#1C775A</color> //#E6C38C
-    <color name="secondary_color">#529881</color>//#71BCE1
+    <color name="grey_less_less">#EBEBEB</color>
+    <color name="app_color">#1C775A</color>
+    <color name="secondary_color">#529881</color>
     <color name="green">#23BD67</color>
     <color name="blue">#3365E4</color>
     <color name="red">#E11E1E</color>
