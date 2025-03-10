@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MedUnnes" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:colorFocusedHighlight">@color/grey_less</item>
+    </style>
+
+    <style name="Theme.MedUnnes" parent="Base.Theme.MedUnnes" />
+    
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:textSize">10sp</item>
+        <item name="iconSize">12dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#788CA0</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/app_color</item>
+    </style>
+</resources>

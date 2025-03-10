@@ -1,0 +1,178 @@
+package com.medunnes.telemedicine.ui.auth.login
+
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
+import com.medunnes.telemedicine.ResetPasswordActivity
+import com.medunnes.telemedicine.ViewModelFactory
+import com.medunnes.telemedicine.databinding.ActivityLoginBinding
+import com.medunnes.telemedicine.ui.home.HomeFragment
+import com.medunnes.telemedicine.ui.main.MainActivity
+import com.medunnes.telemedicine.ui.notification.TokenManager
+import com.medunnes.telemedicine.ui.registeras.RegisterAsActivity
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+
+class LoginActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityLoginBinding
+    private val viewModel by viewModels<LoginViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
+    private lateinit var auth: FirebaseAuth
+    private lateinit var tokenManager: TokenManager
+    private lateinit var firestore: FirebaseFirestore
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+        tokenManager = TokenManager(firestore)
+
+        with(binding) {
+            tvDaftar.setOnClickListener(this@LoginActivity)
+            btnLogin.setOnClickListener(this@LoginActivity)
+            btnBack.setOnClickListener(this@LoginActivity)
+            tvForgotPassword.setOnClickListener(this@LoginActivity)
+        }
+    }
+
+
+    private fun firebaseLogin(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    Log.d("FIREBASE_LOGIN", "Login successful: $user")
+                } else {
+                    Log.w("FIREBASE_LOGIN", "Login Failed", task.exception)
+                }
+            }
+    }
+
+    // Mengatur login user
+    private fun setUserLogin() {
+        val homeFragment = HomeFragment()
+        val bundle = Bundle()
+        homeFragment.arguments = bundle
+
+        val userEmail = "${binding.tieUserEmail.text}"
+        val userPassword = "${binding.tieUserPassword.text}"
+
+        with(viewModel) {
+            lifecycleScope.launch {
+                try {
+                    if (userEmail.isNotEmpty() && userPassword.isNotEmpty()) {
+                        showProgressBar()
+                        val login = login(userEmail, userPassword)
+                        if (login.status) {
+                            setUserLoginId(login.user.idUser)
+                            when (login.user.type) {
+                                "dokter" -> {
+                                    setUserLoginRole(1) // Menyimpan type useer ke DataStore
+                                }
+                                "pasien" -> {
+                                    setUserLoginRole(2)
+                                }
+                                "dosen" -> {
+                                    setUserLoginRole(3)
+                                }
+                            }
+                            firebaseLogin(userEmail, userPassword)
+                            setLoginStatus() // Menyimpan status login user
+
+                            retrieveFcmToken(login.user.idUser. toString())
+                            loginIfSuccess()
+                        } else {
+                            hideProgressBar()
+                            Toast.makeText(this@LoginActivity, login.message, Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        hideProgressBar()
+                        Toast.makeText(this@LoginActivity, "Lengkapi email dan password", Toast.LENGTH_SHORT).show()
+                    }
+                } catch (e: Exception) {
+                    Log.e("LOGIN_ERROR", "error: ${e.localizedMessage}", e)
+                    lifecycleScope.launch {
+                        delay(2000)
+                        hideProgressBar()
+                        Toast.makeText(this@LoginActivity, "login failure", Toast.LENGTH_SHORT).show()
+                        Log.d("ERROR", e.toString())
+                    }
+                }
+            }
+        }
+    }
+
+    private fun retrieveFcmToken(userId: String){
+        FirebaseMessaging.getInstance().token.addOnCompleteListener() { task ->
+            if (task.isSuccessful) {
+                //cetak token di logcat
+                val fcmToken = task.result
+                if (fcmToken != null) {
+                    tokenManager.sendTokenToServer(userId, fcmToken)
+                }
+            } else {
+                Log.e("FCM", "Gagal mendapat token", task.exception)
+            }
+        }
+    }
+
+    private fun showProgressBar() {
+        lifecycleScope.launch {
+            binding.progressBar.visibility = View.VISIBLE
+            binding.cvProgressBar.visibility = View.VISIBLE
+            binding.btnBack.isClickable = false
+            binding.btnLogin.isClickable = false
+        }
+    }
+
+    private fun hideProgressBar() {
+        lifecycleScope.launch {
+            binding.progressBar.visibility = View.GONE
+            binding.cvProgressBar.visibility = View.GONE
+            binding.btnBack.isClickable = true
+            binding.btnLogin.isClickable = true
+        }
+    }
+
+    // Mengalihkan user ke home apbila login berhasil
+    private suspend fun loginIfSuccess() {
+        if (viewModel.getUserStatus()) {
+            hideProgressBar()
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+
+    }
+
+    override fun onClick(view: View?) {
+        with(binding) {
+            when(view) {
+                tvDaftar -> {
+                    val intent = Intent(this@LoginActivity, RegisterAsActivity::class.java)
+                    startActivity(intent)
+                }
+                tvForgotPassword -> {
+                    val intent = Intent(this@LoginActivity, ResetPasswordActivity::class.java)
+                    startActivity(intent)
+                }
+                btnLogin -> setUserLogin()
+                btnBack -> finish()
+            }
+        }
+    }
+}
