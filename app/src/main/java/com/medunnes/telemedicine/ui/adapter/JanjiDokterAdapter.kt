@@ -36,7 +36,7 @@ class JanjiDokterAdapter(
                         tvMessangerStatus.setTextColor(root.resources.getColor(R.color.secondary_color))
                     }
                 }
-                tvPatientSession.text = "${date?.let { fullDateFormat.format(it) }}/Sesi ${janji.sesiId}"
+                tvPatientSession.text = janji.topik//"${date?.let { fullDateFormat.format(it) }}/Sesi ${janji.sesiId}"
                 tvMessangerStatus.text  = janji.status
 
                 val imagePath = "${imageBaseUrl()}/${janji.pasien.imgPasien}"

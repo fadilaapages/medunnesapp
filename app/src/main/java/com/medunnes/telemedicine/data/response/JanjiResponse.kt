@@ -19,6 +19,9 @@ data class JanjiDataItem(
 	@field:SerializedName("datetime")
 	val datetime: String,
 
+	@field:SerializedName("topik")
+	val topik: String,
+
 	@field:SerializedName("pasien_tambahan")
 	val pasienTambahan: PasienTambahan,
 

@@ -202,11 +202,11 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tie_sesi_catatan"
                     android:layout_width="match_parent"
-                    android:layout_height="212dp"
+                    android:layout_height="310dp"
                     android:backgroundTint="@color/white"
                     android:backgroundTintMode="screen"
                     android:hint="@string/berikan_catatan_kepada_dokter"
-                    android:inputType="textLongMessage"
+                    android:inputType="textMultiLine"
                     android:textColor="@color/grey"
                     android:textColorHint="@color/grey" />
 
